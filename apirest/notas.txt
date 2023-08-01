@@ -1,0 +1,27 @@
+npm install express
+npm install axios
+cd apirest/
+node app.js
+
+El servidor estará disponible en http://localhost:4000.
+
+Ahora, puedes usar Postman para probar las rutas y realizar solicitudes CRUD:
+
+Obtener todos los contactos:
+GET http://localhost:4000/api/contactos
+
+Obtener un contacto por su ID (reemplaza :id con el ID del contacto que desees obtener):
+GET http://localhost:4000/api/contactos/:id
+
+Crear un nuevo contacto (envía un objeto JSON con los campos del contacto en el cuerpo de la solicitud):
+POST http://localhost:4000/api/contactos
+Body: { "nombre": "Juan", "telefono": "123456789", "alta": "2023-07-28", "rol": "usuario" }
+
+Actualizar un contacto por su ID (reemplaza :id con el ID del contacto que desees actualizar y envía un objeto JSON con los campos actualizados en el cuerpo de la solicitud):
+PUT http://localhost:4000/api/contactos/:id
+Body: { "telefono": "987654321" }
+
+Eliminar un contacto por su ID (reemplaza :id con el ID del contacto que desees eliminar):
+DELETE http://localhost:4000/api/contactos/:id
+TODO   http://localhost:3000/api/contactos
+

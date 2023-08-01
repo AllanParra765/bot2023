@@ -1,0 +1,20 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5214772307241@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB081738F0454B1C95B2B',
+    participant: undefined
+  },
+  messageTimestamp: 1690853445,
+  pushName: 'Allan',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '5214772307241'
+}

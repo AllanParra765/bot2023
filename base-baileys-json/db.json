@@ -1,0 +1,89 @@
+[
+  {
+    "ref": "cd53d49e-8b6c-42a7-85e4-760e65dc31f0",
+    "keyword": "236eb20d51dbc1fb52da518a9e9540dd",
+    "answer": "hola",
+    "options": {},
+    "from": "5214772307241",
+    "refSerialize": "79e7fc16f7fb85373fd25a99390f44c0"
+  },
+  {
+    "ref": "ans_a1694acf-2bba-406b-820c-9aa7e837354e",
+    "keyword": "key_3d48dfea-4023-4128-a541-a94fad8e5352",
+    "answer": "🙌 Hola bienvenido a este *Chatbot*",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "07df9fc2b517b58a3f5a772a88b3652c",
+    "from": "5214772307241"
+  },
+  {
+    "ref": "ans_b545e82f-2170-44e3-a5ac-0da6a709160c",
+    "keyword": "ans_a1694acf-2bba-406b-820c-9aa7e837354e",
+    "answer": "elmensaje de api es",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "bb848b256b89328e74fbcc99a802f1c8",
+    "from": "5214772307241"
+  },
+  {
+    "ref": "3d399622-28b7-4907-ab6b-2f6b079639c2",
+    "answer": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false
+    },
+    "from": "5214772307241",
+    "refSerialize": "bed02f811832f9b51ea3252b7408b820"
+  },
+  {
+    "ref": "ans_3fac5268-51af-41f3-a82e-2e0343312742",
+    "keyword": "ans_b545e82f-2170-44e3-a5ac-0da6a709160c",
+    "answer": "esta es una imagen",
+    "options": {
+      "media": "https://i.imgur.com/0HpzsEm.png",
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "61deb5b13bcda989735cd667ade9934e",
+    "from": "5214772307241"
+  },
+  {
+    "ref": "ans_0d46adda-199d-414c-a552-c1dcb013c64a",
+    "keyword": "ans_3fac5268-51af-41f3-a82e-2e0343312742",
+    "answer": "Otra cosa despues",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 1500,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "9d020ea7a14cb1eb096428d81033ab62",
+    "from": "5214772307241"
+  }
+]
