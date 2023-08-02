@@ -1,0 +1,44 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5214772307241@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB02C69EACE513B528D1F',
+    participant: undefined
+  },
+  messageTimestamp: 1690939281,
+  pushName: 'Allan',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '5214772307241'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5214772307241@s.whatsapp.net',
+    fromMe: false,
+    id: '8289134F21FC684E40B7E2C962B7DC5A',
+    participant: undefined
+  },
+  messageTimestamp: 1690939419,
+  pushName: 'Allan',
+  broadcast: false,
+  message: Message {
+    locationMessage: LocationMessage {
+      degreesLatitude: 21.17117117117117,
+      degreesLongitude: -101.69249923799246,
+      jpegThumbnail: [Uint8Array]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '_event_location__42ab43f5-2c2e-476d-b149-954d7f4c7a3f',
+  from: '5214772307241'
+}
