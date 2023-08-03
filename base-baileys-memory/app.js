@@ -149,8 +149,7 @@ async function eliminarPost(id) {
 
 const flowEliminar = addKeyword(['eliminar', 'eli', 'e'])
 .addAnswer('eliminar el siguiente',null, async(ctx,{flowDynamic}) => {
-  const data = await eliminarPost(2)//(ctx.body)
-  
+  const data = await eliminarPost(1)//(ctx.body)
   flowDynamic(data)
   
 })
@@ -160,7 +159,7 @@ const flowEliminar = addKeyword(['eliminar', 'eli', 'e'])
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowGuardar,flowActualizar,flowCargar,flowBuscar,flowPrincipal])
+    const adapterFlow = createFlow([flowGuardar,flowActualizar,flowCargar,flowBuscar,flowPrincipal,flowEliminar])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
