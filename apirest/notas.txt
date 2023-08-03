@@ -25,3 +25,135 @@ Eliminar un contacto por su ID (reemplaza :id con el ID del contacto que desees 
 DELETE http://localhost:4000/api/contactos/:id
 TODO   http://localhost:3000/api/contactos
 
+
+
+{
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  }
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////MANUAL BOT//////////////////////////////////////////////////////////
+
+//permite {capture:true captura todo lo que escriba el usuario para mandarlo guarrdar a la base de datos}//
+
+const flowPrincipal = addKeyword('hola').addAnswer('Indica cual es tu email',{capture:true}, (ctx) => {
+    console.log('👉 Informacion del contexto: ', ctx)
+
+/// permite cambiar el puerto a correr nuestro bot///
+ QRPortalWeb({port:4001})
+
+ ////Podemos acceder a los valores que tiene ctx(contexto) ////
+
+ const flowPrincipal = addKeyword(['hola', 'ole', 'alo']) ///colocan una de estas palabras del arreglo
+  .addAnswer('🙌 Hola bienvenido a este *Chatbot*')//primera respuesta que se lanza 
+  .addAnswer('elmensaje de api es',null, async(ctx,{flowDynamic}) => {
+    const data = await obtenerEnlacesDeInteres()
+    flowDynamic(data)
+    console.log("valor de ctx " , ctx.body)
+    console.log("valor de ctx " , ctx.key.id)
+    console.log("valor de ctx " , ctx.from)
+    
+  })/////// lo que hacemos aqui es mandar una respuesta seguido de la respuesta optenida por la base de datos 
+  .addAnswer('esta es una imagen', {
+    media: 'https://i.imgur.com/0HpzsEm.png',
+  })//mandamos una respuesta con formato string mediante el uso de media para mandar archivos es memjor con enlace que el archivo por optimización de teimpo de respuesta 
+  .addAnswer('Otra cosa despues', {
+    delay:1500
+  })/// le colocamos un delay de espera para mandar este mensaje 
+
+//////////////////////////////////////////
+
+const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
+    [
+        '🙌 Aquí encontras un ejemplo rapido',
+        'https://bot-whatsapp.netlify.app/docs/example/',
+        '\n*2* Para siguiente paso.',
+    ],
+    null,
+    null,
+    [flowSecundario]  ///permite dirigir de este flujo al colocado aqui flowSecundario
+
+
+
+//////////////////////////////////////COMO IMPLEMENTAR AXIOS///////////////////////////////////////////////////
+
+npm install axios
+
+const axios = require('axios');
+
+
+// Obtener todos los contactos
+axios.get('http://localhost:3000/api/contactos')
+  .then(response => {
+    const contactos = response.data;
+    console.log('Contactos:', contactos);
+  })
+  .catch(error => {
+    console.error('Error al obtener los contactos:', error.message);
+  });
+
+// Obtener un contacto por su ID (reemplaza ":id" con el ID del contacto que desees obtener)
+axios.get('http://localhost:3000/api/contactos/:id')
+  .then(response => {
+    const contacto = response.data;
+    console.log('Contacto:', contacto);
+  })
+  .catch(error => {
+    console.error('Error al obtener el contacto:', error.message);
+  });
+
+// Crear un nuevo contacto
+const nuevoContacto = {
+  nombre: 'Maria',
+  telefono: '987654321',
+  alta: '2023-07-29',
+  rol: 'usuario'
+};
+
+axios.post('http://localhost:3000/api/contactos', nuevoContacto)
+  .then(response => {
+    const contactoCreado = response.data;
+    console.log('Contacto creado:', contactoCreado);
+  })
+  .catch(error => {
+    console.error('Error al crear el contacto:', error.message);
+  });
+
+// Actualizar un contacto por su ID (reemplaza ":id" con el ID del contacto que desees actualizar)
+const datosActualizados = {
+  telefono: '555555555'
+};
+
+axios.put('http://localhost:3000/api/contactos/:id', datosActualizados)
+  .then(response => {
+    const contactoActualizado = response.data;
+    console.log('Contacto actualizado:', contactoActualizado);
+  })
+  .catch(error => {
+    console.error('Error al actualizar el contacto:', error.message);
+  });
+
+// Eliminar un contacto por su ID (reemplaza ":id" con el ID del contacto que desees eliminar)
+axios.delete('http://localhost:3000/api/contactos/:id')
+  .then(response => {
+    const contactoEliminado = response.data;
+    console.log('Contacto eliminado:', contactoEliminado);
+  })
+  .catch(error => {
+    console.error('Error al eliminar el contacto:', error.message);
+  });
